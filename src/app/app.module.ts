@@ -3,15 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MyCoolComponent } from './Intro-To-Angular/my-component/my-component';
-import { NealComp } from './Intro-To-Angular/Neal-Component/neal-component';
+import { NealComp as ThisIsNeal } from './Intro-To-Angular/Neal-Component/neal-component';
 import { TheSecondComponentComponent } from './Intro-To-Angular/the-second-component/the-second-component.component';
+import TheInterpolationComponet from './Basics/Data-Binding/inter-polation-component/inter-polation-component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyCoolComponent,
-    NealComp,
+    ThisIsNeal,
     TheSecondComponentComponent,
+    TheInterpolationComponet,
   ],
   imports: [BrowserModule],
   providers: [],
