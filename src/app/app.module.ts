@@ -7,6 +7,7 @@ import { NealComp as ThisIsNeal } from './Intro-To-Angular/Neal-Component/neal-c
 import { TheSecondComponentComponent } from './Intro-To-Angular/the-second-component/the-second-component.component';
 import TheInterpolationComponet from './Basics/Data-Binding/inter-polation-component/inter-polation-component';
 import { PropertyBindingComponent } from './Basics/Data-Binding/property-binding/property-binding.component';
+import { EventBindingComponent } from './Basics/Data-Binding/event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PropertyBindingComponent } from './Basics/Data-Binding/property-binding
     TheSecondComponentComponent,
     TheInterpolationComponet,
     PropertyBindingComponent,
+    EventBindingComponent,
   ],
   imports: [BrowserModule],
   providers: [],

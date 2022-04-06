@@ -15,4 +15,8 @@ export default class InterpolationComponent {
       this.name = 'Interpolation Component 2.0.0';
     }, 4000);
   }
+
+  numberOfCars = () => {
+    return this.cars.length;
+  };
 }
