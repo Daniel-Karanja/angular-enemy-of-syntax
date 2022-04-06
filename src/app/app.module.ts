@@ -6,6 +6,7 @@ import { MyCoolComponent } from './Intro-To-Angular/my-component/my-component';
 import { NealComp as ThisIsNeal } from './Intro-To-Angular/Neal-Component/neal-component';
 import { TheSecondComponentComponent } from './Intro-To-Angular/the-second-component/the-second-component.component';
 import TheInterpolationComponet from './Basics/Data-Binding/inter-polation-component/inter-polation-component';
+import { PropertyBindingComponent } from './Basics/Data-Binding/property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import TheInterpolationComponet from './Basics/Data-Binding/inter-polation-compo
     ThisIsNeal,
     TheSecondComponentComponent,
     TheInterpolationComponet,
+    PropertyBindingComponent,
   ],
   imports: [BrowserModule],
   providers: [],
