@@ -1,0 +1,22 @@
+<p>structural-directives works!</p>
+
+<h3>Is our Element hidden?: {{ !showElement }}</h3>
+<button class="btn btn-primary" (click)="toogleElement(123)">Hide/Show</button>
+
+<div *ngIf="showElement; else someElemet">
+  <h3>This should be shown if we want</h3>
+</div>
+
+<ng-template #someElemet>
+  <div>
+    <h3>Only one should be shown</h3>
+  </div>
+</ng-template>
+
+<h2>The github users</h2>
+<div *ngFor="let user of users; index as i">
+  <div style="margin: 15px">
+    <div><img src="{{ user.avatar_url }}" /></div>
+    <h4>{{ user.login }}</h4>
+  </div>
+</div>
