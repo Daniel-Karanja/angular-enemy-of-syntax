@@ -665,4 +665,11 @@ export class StructuralDirectivesComponent implements OnInit {
     console.log(v);
     this.showElement = !this.showElement;
   }
+
+  ifFalse = (i: number) => {
+    if (i % 2 === 0) {
+      return true;
+    }
+    return false;
+  };
 }

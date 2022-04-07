@@ -15,8 +15,8 @@
 
 <h2>The github users</h2>
 <div *ngFor="let user of users; index as i">
-  <div style="margin: 15px">
+  <div style="margin: 15px" *ngIf="ifFalse(i)">
     <div><img src="{{ user.avatar_url }}" /></div>
-    <h4>{{ user.login }}</h4>
+    <h4>{{ user.login }}: No: {{ i }}</h4>
   </div>
 </div>
