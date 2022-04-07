@@ -1,0 +1,18 @@
+<p>parent-component works!</p>
+
+<!-- <app-child-component
+  [loginName]="'some name'"
+  [userImg]="'https://avatars.githubusercontent.com/u/2?v=4'"
+  [userNo]="5"
+></app-child-component> -->
+
+<div class="we-row-padding">
+  <div *ngFor="let user of users; index as i">
+    <app-child-component
+      [loginName]="getUSerName(user)"
+      [userImg]="getUserImg(user)"
+      [userNo]="i"
+    ></app-child-component>
+  </div>
+</div>
+<!--  -->

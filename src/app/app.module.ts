@@ -10,6 +10,10 @@ import { PropertyBindingComponent } from './Basics/Data-Binding/property-binding
 import { EventBindingComponent } from './Basics/Data-Binding/event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './Basics/Data-Binding/two-way-data-binding/two-way-data-binding.component';
 import { StructuralDirectivesComponent } from './Basics/Directives/Basics/Directives/structural-directives/structural-directives.component';
+import { ParentComponentComponent } from './Basics/Component-Data-Binding/parent-child/parent-component/parent-component.component';
+import { ChildComponentComponent } from './Basics/Component-Data-Binding/parent-child/child-component/child-component.component';
+import { TheParentComponetComponent } from './Basics/Component-Data-Binding/child-parent/the-parent-componet/the-parent-componet.component';
+import { TheChildComponentComponent } from './Basics/Component-Data-Binding/child-parent/the-child-component/the-child-component.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { StructuralDirectivesComponent } from './Basics/Directives/Basics/Direct
     EventBindingComponent,
     TwoWayDataBindingComponent,
     StructuralDirectivesComponent,
+    ParentComponentComponent,
+    ChildComponentComponent,
+    TheParentComponetComponent,
+    TheChildComponentComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

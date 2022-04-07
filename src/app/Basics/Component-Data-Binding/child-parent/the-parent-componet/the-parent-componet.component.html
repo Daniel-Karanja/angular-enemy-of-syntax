@@ -1,0 +1,11 @@
+<p>the-parent-componet works!</p>
+
+<h2 class="w3-center">The Cars we have</h2>
+<div class="w3-container">
+  <div *ngFor="let car of cars; index as i">
+    <h3>{{ car }}</h3>
+  </div>
+</div>
+<button (click)="addACar('Custom coar')">Other Button</button>
+
+<app-the-child-component (addCar)="addACar($event)"></app-the-child-component>
