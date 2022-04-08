@@ -1,0 +1,15 @@
+<div></div>
+
+<div class="fullWidth w3-row-padding">
+  <div
+    class="w3-col m3 w3-container w3-margin-top"
+    *ngFor="let item of items; index as i"
+  >
+    <app-card-component
+      [card-img-src]="getItemVar(item, 'img')"
+      [card-item-name]="getItemVar(item, 'name')"
+      [card-item-no]="i"
+      (delete_item)="Item_to_be_deleted($event)"
+    ></app-card-component>
+  </div>
+</div>

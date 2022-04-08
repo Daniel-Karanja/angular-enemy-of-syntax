@@ -1,0 +1,19 @@
+<div class="fullScreen">
+  <app-header
+    [logo]="'The Cool Shoping List'"
+    [btn1]="'New Item'"
+    [btn2]="card"
+    (btnPress)="headerBtnClick($event)"
+  ></app-header>
+  <div class="fullWidth flex-main-center w3-margin-bottom" *ngIf="showAddItem">
+    <div style="width: 70%" class="w3-light-grey w3-round-large">
+      <app-add-item-componet
+        (newItem)="AddNewShoppingItem($event)"
+      ></app-add-item-componet>
+    </div>
+  </div>
+  <app-card-view
+    [shopping_list_items]="items"
+    (view-card-comp-delete)="DeleteItem($event)"
+  ></app-card-view>
+</div>

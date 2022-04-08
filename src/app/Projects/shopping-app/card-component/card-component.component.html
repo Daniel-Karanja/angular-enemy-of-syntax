@@ -1,0 +1,14 @@
+<div class="w3-card-4">
+  <div class="flex-main-center">
+    <img width="80%" src="{{ imgSrc }}" />
+  </div>
+  <h4 class="w3-center">{{ ItemName }} : {{ ItemNo }}</h4>
+  <div class="w3-center">
+    <button
+      (click)="DeleteItem()"
+      class="w3-button w3-red w3-margin-bottom w3-round-large w3-ripple"
+    >
+      Delete
+    </button>
+  </div>
+</div>

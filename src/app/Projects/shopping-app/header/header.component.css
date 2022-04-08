@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexStart {
+  display: flex;
+  align-self: flex-start;
+}
+
+.flexEnd {
+  display: flex;
+  align-self: flex-end;
+}

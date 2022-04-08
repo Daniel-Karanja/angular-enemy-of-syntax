@@ -1,0 +1,18 @@
+<div class="full-screen" style="padding: 24px">
+  <p>
+    <label>Enter Image Link</label>
+    <input class="w3-input w3-border" [(ngModel)]="inImgLink" />
+  </p>
+  <p>
+    <label>Enter Item Name</label>
+    <input class="w3-input w3-border" [(ngModel)]="inItemName" />
+  </p>
+  <div class="w3-margin-bottom w3-margin-top flex-space-evenly">
+    <button class="w3-button w3-blue w3-round w3-ripple" (click)="SubmitBtn()">
+      Submit
+    </button>
+    <button class="w3-button w3-red w3-round w3-ripple" (click)="ClearBtn()">
+      Clear
+    </button>
+  </div>
+</div>

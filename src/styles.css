@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+  color: red;
+}
+
+.fullScreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-main-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}

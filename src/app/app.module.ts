@@ -14,6 +14,11 @@ import { ParentComponentComponent } from './Basics/Component-Data-Binding/parent
 import { ChildComponentComponent } from './Basics/Component-Data-Binding/parent-child/child-component/child-component.component';
 import { TheParentComponetComponent } from './Basics/Component-Data-Binding/child-parent/the-parent-componet/the-parent-componet.component';
 import { TheChildComponentComponent } from './Basics/Component-Data-Binding/child-parent/the-child-component/the-child-component.component';
+import { MainComponent } from './Projects/shopping-app/main/main.component';
+import { HeaderComponent } from './Projects/shopping-app/header/header.component';
+import { CardViewComponent } from './Projects/shopping-app/card-view/card-view.component';
+import { CardComponentComponent } from './Projects/shopping-app/card-component/card-component.component';
+import { AddItemComponetComponent } from './Projects/shopping-app/add-item-componet/add-item-componet.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,11 @@ import { TheChildComponentComponent } from './Basics/Component-Data-Binding/chil
     ChildComponentComponent,
     TheParentComponetComponent,
     TheChildComponentComponent,
+    MainComponent,
+    HeaderComponent,
+    CardViewComponent,
+    CardComponentComponent,
+    AddItemComponetComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
