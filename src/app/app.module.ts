@@ -19,6 +19,14 @@ import { HeaderComponent } from './Projects/shopping-app/header/header.component
 import { CardViewComponent } from './Projects/shopping-app/card-view/card-view.component';
 import { CardComponentComponent } from './Projects/shopping-app/card-component/card-component.component';
 import { AddItemComponetComponent } from './Projects/shopping-app/add-item-componet/add-item-componet.component';
+import { ParentLifeCycleCompComponent } from './intermediary/Life-Cycle-Events/parent-life-cycle-comp/parent-life-cycle-comp.component';
+import { ChildLifeCycleCompComponent } from './intermediary/Life-Cycle-Events/child-life-cycle-comp/child-life-cycle-comp.component';
+import { CustomDirectiveComponent } from './intermediary/Directives/custom-directive/custom-directive.component';
+import { MyDirectiveDirective } from './intermediary/Directives/my-directive.directive';
+import { RenderDirectiveDirective } from './intermediary/Directive/render-directive.directive';
+import { HostListnerDirectiveDirective } from './intermediary/Directive/host-listner-directive.directive';
+import { MainBanckComponentComponent } from './Projects/Banking-App/main-banck-component/main-banck-component.component';
+import { NewAccountComponentComponent } from './Projects/Banking-App/new-account-component/new-account-component.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +48,14 @@ import { AddItemComponetComponent } from './Projects/shopping-app/add-item-compo
     CardViewComponent,
     CardComponentComponent,
     AddItemComponetComponent,
+    ParentLifeCycleCompComponent,
+    ChildLifeCycleCompComponent,
+    CustomDirectiveComponent,
+    MyDirectiveDirective,
+    RenderDirectiveDirective,
+    HostListnerDirectiveDirective,
+    MainBanckComponentComponent,
+    NewAccountComponentComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

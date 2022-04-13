@@ -1,0 +1,24 @@
+<div class="fullScreen">
+  <h4 class="w3-center">Create a new account</h4>
+  <app-new-account-component></app-new-account-component>
+  <h4 class="w3-center">All Our Accounts</h4>
+  <div class="flex-main-center" style="width: 100%">
+    <div style="width: 70%">
+      <div *ngFor="let account of accounts; index as i">
+        <div
+          class="w3-border w3-margin-top w3-margin-bottom w3-padding w3-light-grey"
+        >
+          <h3>
+            Name <strong>{{ account.name }}</strong>
+          </h3>
+          <h3>
+            Balance <strong>{{ account.balance }}</strong>
+          </h3>
+          <h3>
+            Type <strong>{{ account.type }}</strong>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

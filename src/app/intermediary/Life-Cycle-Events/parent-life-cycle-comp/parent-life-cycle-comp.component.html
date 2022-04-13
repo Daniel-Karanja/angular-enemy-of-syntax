@@ -1,0 +1,7 @@
+<h3>This is a a life cycle hook</h3>
+<input [(ngModel)]="inputFrom" />
+<button (click)="toggleChild()">Hide/Show Child</button>
+<app-child-life-cycle-comp
+  *ngIf="showChild"
+  [someText]="inputFrom"
+></app-child-life-cycle-comp>
