@@ -6,6 +6,8 @@ import { LogService } from './../Services/log.service';
 Complete the project.
 Add Deposit to account. This should change the balance
 Add Withdraw to account. This should change the balance
+Emit an event whem someone Deposits
+Emit an event whem someone Withdraws
 */
 
 @Component({
@@ -16,7 +18,9 @@ Add Withdraw to account. This should change the balance
 })
 export class MainBanckComponentComponent implements OnInit {
   accounts: { name: string; balance: number; type: string }[] = [];
-  constructor(private bankService: BankingService) {}
+  constructor(private bankService: BankingService) {
+    this.bankService.someEvent.subscribe((event: any) => console.log(event));
+  }
 
   ngOnInit(): void {
     this.accounts = this.bankService.accounts;

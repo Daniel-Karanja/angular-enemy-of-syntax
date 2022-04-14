@@ -1,7 +1,9 @@
+import { EventEmitter } from '@angular/core';
 import { LogService } from './log.service';
 import { Injectable } from '@angular/core';
 @Injectable()
 class BankingService {
+  someEvent = new EventEmitter();
   constructor(private logservice: LogService) {}
 
   accounts: { name: string; balance: number; type: string }[] = [
@@ -13,6 +15,7 @@ class BankingService {
   newAccount(obj: { name: string; type: string }) {
     this.accounts.push({ ...obj, balance: 0 });
     this.logservice.logSomething('New Account Created');
+    this.someEvent.emit('Hey You. New Account Created');
   }
 }
 

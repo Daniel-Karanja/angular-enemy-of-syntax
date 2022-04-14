@@ -1,0 +1,8 @@
+<div class="full-screen">
+  <app-header-basics></app-header-basics>
+  <div class="full-screen">
+    <app-home-basic *ngIf="pageToShow[0]"></app-home-basic>
+    <app-about-basic *ngIf="pageToShow[1]"></app-about-basic>
+    <app-contact-basic *ngIf="pageToShow[2]"></app-contact-basic>
+  </div>
+</div>

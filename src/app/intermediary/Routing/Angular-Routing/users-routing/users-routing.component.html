@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: center">
+  <div>
+    <div *ngFor="let user of users; index as i">
+      <div
+        class="w3-padding w3-margin w3-border w3-ripple"
+        style="cursor: pointer"
+        (click)="showSingleUser(i)"
+      >
+        <h1>User Name: {{ user.name }}</h1>
+      </div>
+    </div>
+  </div>
+</div>

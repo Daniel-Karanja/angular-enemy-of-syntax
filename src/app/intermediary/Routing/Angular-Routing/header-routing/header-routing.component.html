@@ -1,0 +1,33 @@
+<div class="w3-bar w3-green" style="width: 100%">
+  <a
+    routerLink="/"
+    class="w3-bar-item w3-button"
+    routerLinkActive="w3-blue"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Home</a
+  >
+  <a
+    routerLink="/users"
+    class="w3-bar-item w3-button"
+    routerLinkActive="w3-blue"
+    >Users</a
+  >
+  <a
+    [routerLink]="['/about']"
+    class="w3-bar-item w3-button"
+    routerLinkActive="w3-blue"
+    >About</a
+  >
+  <a
+    [routerLink]="['/contact']"
+    class="w3-bar-item w3-button"
+    routerLinkActive="w3-blue"
+    >Contact</a
+  >
+  <a
+    routerLink="/dashboard"
+    class="w3-bar-item w3-button"
+    routerLinkActive="w3-blue"
+    >Dashboard</a
+  >
+</div>
