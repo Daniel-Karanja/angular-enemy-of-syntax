@@ -1,0 +1,63 @@
+<div style="display: flex; justify-content: center" class="fullscreen">
+  <div style="width: 50%" class="w3-padding w3-margin" #myEl>
+    <form (ngSubmit)="submitForm(f)" class="w3-padding w3-card-4" #f="ngForm">
+      <div ngModelGroup="pet">
+        <p>
+          <label>Enter Pet Name</label>
+          <input
+            name="petName"
+            class="w3-input w3-border"
+            [(ngModel)]="thePetName"
+            required
+          />
+        </p>
+        <p class="w3-center">
+          <button
+            (click)="onSugestPetName(f)"
+            class="w3-button w3-light-grey w3-round-large w3-ripple"
+          >
+            Suggest Name
+          </button>
+        </p>
+        <!-- <p>Your Pet Name: {{ thePetName }}</p> -->
+        <p>
+          <label>Enter Pet Age</label>
+          <input name="petAge" class="w3-input w3-border" ngModel />
+        </p>
+      </div>
+      <div ngModelGroup="owner">
+        <p>
+          <label>Owner Name</label>
+          <input name="owner" class="w3-input w3-border" ngModel />
+        </p>
+        <p>
+          <label>Owner email</label>
+          <input
+            name="email"
+            class="w3-input w3-border"
+            ngModel
+            required
+            email
+            #email="ngModel"
+          />
+        </p>
+        <p *ngIf="!email.valid && email.touched">Hey enter a valid email</p>
+      </div>
+      <div class="w3-center">
+        <button
+          class="w3-button w3-blue w3-round-large w3-ripple"
+          type="submit"
+          [ngClass]="!f.valid ? 'w3-disabled' : ''"
+        >
+          Submit
+        </button>
+        <button
+          class="w3-button w3-margin-left w3-red w3-round-large w3-ripple"
+          (click)="onClearForm(f)"
+        >
+          Clear
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

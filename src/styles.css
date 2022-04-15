@@ -30,3 +30,7 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
+
+input.ng-invalid {
+  border: 1px solid red !important;
+}

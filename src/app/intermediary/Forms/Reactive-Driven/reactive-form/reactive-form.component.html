@@ -1,0 +1,42 @@
+<div class="fullScreen w3-margin-top">
+  <h2 class="w3-center">This Is A Reactively Created Form</h2>
+  <div style="display: flex; justify-content: center">
+    <form
+      (ngSubmit)="onSubmit()"
+      class="w3-padding w3-card-4"
+      style="width: 40%"
+      [formGroup]="myForm"
+    >
+      <p>
+        <label>Enter Pet Name</label>
+        <input formControlName="petName" class="w3-input w3-border" />
+      </p>
+      <p>
+        <label>Enter Pet Age</label>
+        <input
+          formControlName="petAge"
+          type="number"
+          class="w3-input w3-border"
+        />
+      </p>
+      <div formGroupName="user">
+        <p>
+          <label>User Name</label>
+          <input formControlName="name" class="w3-input w3-border" />
+        </p>
+        <p>
+          <label>Enter Email</label>
+          <input formControlName="email" class="w3-input w3-border" />
+        </p>
+        <p *ngIf="!myForm.get('email')?.valid && myForm.get('email')?.touched">
+          Hey Email Not Valid
+        </p>
+      </div>
+      <div class="w3-center">
+        <button type="submit" class="w3-button w3-blue w3-round-large">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

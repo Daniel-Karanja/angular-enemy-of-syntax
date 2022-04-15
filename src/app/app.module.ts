@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -46,6 +46,8 @@ import { WildCardRoutingComponent } from './intermediary/Routing/Angular-Routing
 import { DashboardRoutingComponent } from './intermediary/Routing/Angular-Routing/dashboard-routing/dashboard-routing.component';
 import { OneCompComponent } from './intermediary/Routing/Angular-Routing/dashboard-routing/one-comp/one-comp.component';
 import { TwoCompComponent } from './intermediary/Routing/Angular-Routing/dashboard-routing/two-comp/two-comp.component';
+import { MyCoolFormComponent } from './intermediary/Forms/Template-Driven/my-cool-form/my-cool-form.component';
+import { ReactiveFormComponent } from './intermediary/Forms/Reactive-Driven/reactive-form/reactive-form.component';
 
 //Nesting the users Routes.
 //When you go to the dashboard route the first component should be loaded by default:
@@ -112,8 +114,15 @@ const appRoutes: Routes = [
     DashboardRoutingComponent,
     OneCompComponent,
     TwoCompComponent,
+    MyCoolFormComponent,
+    ReactiveFormComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
