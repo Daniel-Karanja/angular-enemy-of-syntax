@@ -9,6 +9,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ReactiveFormComponent implements OnInit {
   myForm!: FormGroup;
+  userName = 'Daniel-Karanja';
+  token = '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';
 
   constructor(private http: HttpClient) {}
 
@@ -31,19 +33,73 @@ export class ReactiveFormComponent implements OnInit {
 
   getAllUsers = () => {
     this.http
-      .get('https://api.mazimobility.xyz/api/battery/fetch', {
-        headers: new HttpHeaders({
-          token:
-            'dsbfghfvcdfv eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6Imtub3dhcnRodXJAZ21haWwuY29tIiwiaWF0IjoxNjUwMzQ5MzE0LCJleHAiOjE2NTAzNzgxMTR9.HTJWeKQ-TvydJWj3JKQg8wQH30ohJ5z2vDctUa9d-sQ',
-        }),
-      })
+      .get(
+        `https://${this.userName}:${this.token}@api.github.com/users/octocat`
+      )
       .subscribe(
         (response) => {
           console.log(response);
         },
-        (error) => {
-          console.log(error);
+        (e) => {
+          console.log(e);
         }
       );
+
+    // this.http.get('https://api.github.com/users').subscribe((response) => {
+    //   console.log(response);
+    // });
+    // this.http
+    //   .post('https://api.mazimobility.xyz/api/user/login', {
+    //     email: 'knowarthur@gmail.com',
+    //     password: '1234rffdgfd',
+    //   })
+    //   .subscribe(
+    //     (response) => {
+    //       console.log(response);
+    //     },
+    //     (error) => {
+    //       console.log(error);
+    //     }
+    //   );
+    // this.http
+    //   .get('https://api.mazimobility.xyz/api/battery/fetch?page=1&limit=10', {
+    //     headers: new HttpHeaders({
+    //       token:
+    //         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6Imtub3dhcnRodXJAZ21haWwuY29tIiwiaWF0IjoxNjUwMzYxMTM3LCJleHAiOjE2NTAzODk5Mzd9.8T1J47GydZW1eOErLL1ru2UumFwm3aMVBXx8D2HyQ98',
+    //     }),
+    //   })
+    //   .subscribe(
+    //     (response) => {
+    //       console.log(response);
+    //     },
+    //     (e) => {
+    //       console.log(e);
+    //     }
+    //   );
+    // this.http
+    //   .post(
+    //     'https://api.mazimobility.xyz/api/user/create',
+    //     {
+    //       name: 'Yvone Muthui',
+    //       email: 'yvon2@yvin.com',
+    //       phone: '4535646456',
+    //       role: 'admin',
+    //       password: '1234',
+    //     },
+    //     {
+    //       headers: new HttpHeaders({
+    //         token:
+    //           'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6Imtub3dhcnRodXJAZ21haWwuY29tIiwiaWF0IjoxNjUwMzYxMTM3LCJleHAiOjE2NTAzODk5Mzd9.8T1J47GydZW1eOErLL1ru2UumFwm3aMVBXx8D2HyQ98',
+    //       }),
+    //     }
+    //   )
+    //   .subscribe(
+    //     (response) => {
+    //       console.log(response);
+    //     },
+    //     (error) => {
+    //       console.log(error);
+    //     }
+    //   );
   };
 }
