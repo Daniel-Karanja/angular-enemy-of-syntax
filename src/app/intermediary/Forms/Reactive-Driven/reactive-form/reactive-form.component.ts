@@ -31,6 +31,33 @@ export class ReactiveFormComponent implements OnInit {
     console.log(this.myForm);
   };
 
+  fetchGithubUsers = () => {
+    return new Promise((resolve, reject) => {
+      this.http
+        .get(
+          `https://${this.userName}:${this.token}@api.githubsdcxzc.com/users/octocat`
+        )
+        .toPromise()
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  };
+
+  // onGet = async () => {};
+
+  async onGet() {
+    try {
+      let res = await this.fetchGithubUsers();
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   getAllUsers = () => {
     this.http
       .get(
